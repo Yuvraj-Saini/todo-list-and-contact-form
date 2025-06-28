@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Form</h1>
+            <p>Get in touch with us - we'd love to hear from you!</p>
+        </header>
+
+        <main>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required
+                        aria-describedby="fullName-error">
+                    <div class="error-message" id="fullName-error" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required
+                        aria-describedby="email-error">
+                    <div class="error-message" id="email-error" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)"
+                        aria-describedby="phone-error">
+                    <div class="error-message" id="phone-error" role="alert"></div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" rows="5" required
+                        aria-describedby="message-error"></textarea>
+                    <div class="character-count">
+                        <span id="charCount">0</span>/500 characters
+                    </div>
+                    <div class="error-message" id="message-error" role="alert"></div>
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loading" style="display: none;">
+                        <span class="spinner"></span>
+                        Sending...
+                    </span>
+                </button>
+
+                <div class="success-message" id="successMessage" role="alert">
+                    <div class="success-icon">✓</div>
+                    <div class="success-content">
+                        <h3>Message sent successfully!</h3>
+                        <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </form>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
